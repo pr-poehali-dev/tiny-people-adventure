@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "Генерация нового правила города",
+      "method": "POST",
+      "path": "/",
+      "body": { "people": 5, "era": "современность" },
+      "expectedStatus": 200,
+      "expectedBody": { "rule": "string", "era": "string", "mode": "string" },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "CORS preflight",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200
+    }
+  ]
+}
