@@ -159,47 +159,12 @@
       0 0 16px hsl(var(--accent) / 0.5);
   }
 
-  /* трава — базовый грунт города */
-  .tile-grass {
-    background-color: #4f7a3a;
+  /* pixel grass tile ground */
+  .grid-ground {
+    background-color: #0e1220;
     background-image:
-      radial-gradient(circle at 20% 30%, #5c8a44 2px, transparent 2px),
-      radial-gradient(circle at 70% 60%, #45702f 2px, transparent 2px),
-      radial-gradient(circle at 45% 80%, #5c8a44 1px, transparent 1px);
-    background-size:
-      16px 16px,
-      16px 16px,
-      12px 12px;
-  }
-  /* асфальт дороги */
-  .tile-road {
-    background-color: #3a3d42;
-    background-image:
-      linear-gradient(#33363b 1px, transparent 1px),
-      linear-gradient(90deg, #33363b 1px, transparent 1px);
-    background-size: 8px 8px;
-  }
-  /* пунктир разметки по центру дороги */
-  .tile-road-mark::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: repeating-linear-gradient(
-      to bottom,
-      #d9c24a 0 8px,
-      transparent 8px 20px
-    );
-    background-size: 3px 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.85;
-  }
-  /* тротуар — плитка */
-  .tile-side {
-    background-color: #8f8b82;
-    background-image:
-      linear-gradient(#7d7970 1px, transparent 1px),
-      linear-gradient(90deg, #7d7970 1px, transparent 1px);
-    background-size: 8px 8px;
+      linear-gradient(hsl(var(--primary) / 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.08) 1px, transparent 1px);
+    background-size: 32px 32px;
   }
 }
